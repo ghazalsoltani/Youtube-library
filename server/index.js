@@ -13,7 +13,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 const API_KEY = 'AIzaSyBNnouTt_jnnCjYcLCtT2etBU6Kss-PnwM'; 
 const YOUTUBE_API_URL = 'https://www.googleapis.com/youtube/v3';
 
-app.get('/users/search', async (req, res) => {
+app.get('/search', async (req, res) => {
     const { query } = req.query;
     try {
         const response = await axios.get(`${YOUTUBE_API_URL}/search`, {
@@ -21,7 +21,7 @@ app.get('/users/search', async (req, res) => {
                 q: query,
                 part: 'snippet',
                 type: 'video',
-                maxResults: 10,
+                maxResults: 5,
                 key: API_KEY
             }
         });

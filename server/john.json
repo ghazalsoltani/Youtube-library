@@ -1,21 +1,4 @@
 {
-  "name": "john",
-  "videos": [
-    {
-      "title": "Learn React Hooks: useEffect - Simply Explained!",
-      "id": "-4XpG5_Lj_o"
-    },
-    {
-      "id": "l9AzO1FMgM8",
-      "title": "Java in 100 Seconds"
-    },
-    {
-      "id": "a7_WFUlFS94",
-      "title": "PHP in 100 Seconds"
-    },
-    {
-      "id": "OK_JCtrrv-c",
-      "title": "PHP Programming Language Tutorial - Full Course"
-    }
-  ]
+  "name": "John",
+  "videos": []
 }

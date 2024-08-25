@@ -1,13 +1,145 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Roboto', sans-serif;
+  margin: 022;
+  padding: 0;
+  background-color: #f7f9fc;
+  color: #333;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h1,
+h2 {
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+button {
+  background-color: #740606;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-size: 14px;
+}
+
+button:hover {
+  background-color: #ca0c0c;
+  transform: scale(1.05);
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  background-color: #eaf2f8;
+}
+
+/* Left panel styles */
+.left-panel {
+  width: 30%;
+  padding: 20px;
+  background-color: #ecf0f1;
+  border-right: 2px solid #bdc3c7;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px 0 0 10px;
+  text-align: center;
+}
+
+.left-panel h1 {
+  margin-bottom: 20px;
+  font-size: 30px;
+  text-transform: capitalize;
+  font-family: 'Georgia', serif;
+  font-style: italic;
+}
+
+.left-panel ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.left-panel ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-size: 16px;
+  font-weight: bold;
+}
+.right-panel ul li p {
+  font-size: 16px;
+  font-weight: normal;
+  color: #000000;
+
+}
+
+.left-panel ul li:hover {
+  background-color: #dfe6e9;
+  transform: translateY(-2px);
+}
+
+.left-panel ul li span {
+  cursor: pointer;
+  flex-grow: 1;
+  font-size: 16px;
+}
+
+/* Right panel styles */
+.right-panel {
+  width: 70%;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  border-radius: 0 10px 10px 0;
+}
+
+.right-panel h2 {
+  margin-bottom: 20px;
+  font-size: 32px;
+  font-family: "Times New Roman", Times, serif;
+}
+.right-panel h3 {
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+iframe {
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.right-panel p {
+  font-size: 18px;
+  color: #7f8c8d;
+}
+
+/* Styles for the search input and button */
+input[type="text"],
+input[type="number"] {
+  height: 20px;
+  padding: 6px 12px;
+  border-radius: 5px;
+  border: 1px solid #6b0505;
+  font-size: 14px;
+  margin-right: 6px;
+}
+input[type="text"] {
+  width: 200px;
+}
+
+button {
+  height: 34px;
+  margin-left: 1px;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  opacity: 1;
 }

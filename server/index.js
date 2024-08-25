@@ -1,37 +1,46 @@
+// Dependencies
 const express = require('express');
+const cors = require('cors');
 const axios = require('axios');
-const { google } = require('googleapis');
 const fs = require('fs');
 const path = require('path');
+
+// Node server
 const app = express();
+
+// Middleware
 app.use(express.json());
-const cors = require('cors');
 app.use(cors());
 app.use(express.static(path.join(__dirname, 'public')));
 
-
+// YouTube API
 const API_KEY = 'AIzaSyBNnouTt_jnnCjYcLCtT2etBU6Kss-PnwM'; 
 const YOUTUBE_API_URL = 'https://www.googleapis.com/youtube/v3';
 
+// Routes
+
+// Search
 app.get('/search', async (req, res) => {
-    const { query } = req.query;
+    const { query, maxResults = 5 } = req.query; // Extract maxResults from the query parameters with a default value
+
     try {
         const response = await axios.get(`${YOUTUBE_API_URL}/search`, {
             params: {
                 q: query,
                 part: 'snippet',
                 type: 'video',
-                maxResults: 5,
+                maxResults: maxResults,
                 key: API_KEY
             }
         });
         res.json(response.data.items);
     } catch (error) {
-        console.error(error);
+        console.error('Error searching for videos:', error.message);
         res.status(500).send('Error searching for videos');
     }
 });
 
+// Add video to user's library
 app.post('/users/:username/videos', (req, res) => {
     const { username } = req.params;
     const { video } = req.body;
@@ -104,6 +113,7 @@ app.delete('/users/:username/videos/:videoId', (req, res) => {
     }
 }); 
 
+// Start the server
 const port = process.env.PORT || 3001;
 app.listen(port, () => {
     console.log(`Server listening at http://localhost:${port}`);

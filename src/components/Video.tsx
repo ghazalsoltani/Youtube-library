@@ -4,27 +4,20 @@ interface VideoProps {
     id: string;
 }
 
-const Video: React.FC<VideoProps> = (props) => {
-    //get id from props
-    const id = props.id;
-    // Id from Json user file
-    const idVideo = `https://www.youtube.com/embed/${id}`;
+const Video: React.FC<VideoProps> = ({ id }) => {
+    const videoUrl = `https://www.youtube.com/embed/${id}`;
 
     return (
-        <>
-            <iframe
-                width="560"
-                height="315"
-                src={idVideo}
-                title="YouTube video player"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen>
-            </iframe>
-        </>
+        <iframe
+            width="100%"
+            height="500px"
+            src={videoUrl}
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+        ></iframe>
     );
 }
 
 export default Video;
-

@@ -1,7 +1,7 @@
+//importations
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Library from '../pages/Library';
-import Search from '../pages/Search';
 
 const Router: React.FC = () => {
     return (
@@ -14,4 +14,3 @@ const Router: React.FC = () => {
 };
 
 export default Router;
-

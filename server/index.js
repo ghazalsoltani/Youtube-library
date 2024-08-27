@@ -4,6 +4,7 @@ const cors = require('cors');
 const axios = require('axios');
 const fs = require('fs');
 const path = require('path');
+require('dotenv').config();
 
 // Node server
 const app = express();
@@ -14,7 +15,7 @@ app.use(cors());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // YouTube API
-const API_KEY = 'AIzaSyBNnouTt_jnnCjYcLCtT2etBU6Kss-PnwM'; 
+const API_KEY = process.env.YOUTUBE_API_KEY;
 const YOUTUBE_API_URL = 'https://www.googleapis.com/youtube/v3';
 
 // Routes

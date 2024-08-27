@@ -1,5 +1,5 @@
 import React from 'react';
-
+//The VideoProps interface is used to specify that any object passed to the Video component as props must have an id property of type string.
 interface VideoProps {
     id: string;
 }
@@ -13,7 +13,6 @@ const Video: React.FC<VideoProps> = ({ id }) => {
             height="500px"
             src={videoUrl}
             title="YouTube video player"
-            frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
         ></iframe>

@@ -85,7 +85,7 @@ export default function Library() {
                                     value={video.title}
                                     onChange={(e) => handleTitleChange(video.id, e.target.value)}
                                     onBlur={() => toggleEdit(video.id)} 
-                                    onKeyPress={(e) => handleKeyPress(e, video.id)} 
+                                    onKeyDown={(e) => handleKeyPress(e, video.id)} 
                                     autoFocus
                                 />
                             ) : (

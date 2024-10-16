@@ -1,4 +1,30 @@
-# Getting Started Node Server & React App
+# # YouTube Library Project
+### Feature 2: [Feature Name]
+![Feature 1 Demo](screenshot/Youtube_library.gif)
+
+## Tech Stack
+- Node.js
+- TypeScript
+- YouTube API
+
+## API Endpoints
+
+- `GET /search` - Search for YouTube videos
+- `POST /users/:username/videos` - Add a video to library
+- `GET /users/:username/videos` - Get user's video library
+- `DELETE /users/:username/videos/:videoId` - Remove video from library
+
+## Setup
+
+1. Clone the repository
+2. Install dependencies:
+   ```npm install```
+3. Copy `.env.example` to `.env`:
+   ```cp .env.example .env```
+4. Add your YouTube API key to the `.env` file
+5. Start the server:
+   ```npm start```
+
 
 ### Install dependencies for Node Server
 - express

@@ -1,6 +1,6 @@
 # # YouTube Library Project
-### Feature 2: [Feature Name]
-![Feature 1 Demo](screenshot/Youtube_library.gif)
+### Feature
+![Feature Demo](screenshot/Youtube_library.gif)
 
 ## Tech Stack
 - Node.js

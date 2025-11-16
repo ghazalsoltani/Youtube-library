@@ -1,4 +1,4 @@
-# YouTube Library 📚
+# YouTube Library 🎬🎬🎬
 
 A full-stack web application that allows users to create and manage personalized video libraries using the YouTube API. Built with React, TypeScript, and Node.js.
 
